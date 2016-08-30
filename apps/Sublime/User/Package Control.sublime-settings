@@ -1,0 +1,29 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"AlignTab",
+		"CTags",
+		"DashDoc",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"Github Tools",
+		"Indent XML",
+		"LiveReload",
+		"Markdown Extended",
+		"Monokai Extended",
+		"Package Control",
+		"Path Tools",
+		"Ruby Markers",
+		"RubyTest",
+		"SCSS",
+		"sublime-github",
+		"Theme - Soda",
+		"Theme - Spacegray"
+	]
+}

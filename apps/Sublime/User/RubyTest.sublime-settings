@@ -1,0 +1,9 @@
+{
+  "run_ruby_unit_command": "m {relative_path}",
+  "run_single_ruby_unit_command": "m {relative_path}:{line_number}",
+
+  "check_for_rvm": true,
+  "check_for_bundler": true,
+
+  "theme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme"
+}

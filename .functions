@@ -1,0 +1,16 @@
+function google() {
+  ARGS=$(echo "$@" | sed -e 's/ /+/g');
+  open "https://www.google.com/search?q=$ARGS";
+}
+
+function gompare() {
+  open "https://github.com/avantcredit/$(basename "$PWD")/compare/$(git rev-parse --abbrev-ref HEAD)";
+}
+
+function s() {
+  if [ $# -eq 0 ]; then
+    subl .;
+  else
+    subl "$@";
+  fi;
+}
