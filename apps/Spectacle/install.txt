@@ -1,0 +1,1 @@
+Download the Spectacle app. Move Shortcuts.json into ~/Library/Application Support/Spectacle.

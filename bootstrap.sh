@@ -14,7 +14,11 @@ function doIt() {
     -avh --no-perms . ~;
   source ~/.bash_profile;
   rm -r ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
-  ln -s ~/Dropbox/Sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
+  ln -s apps/Sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
+
+  defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
+  defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+  defaults write -g com.apple.trackpad.scaling 3
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
