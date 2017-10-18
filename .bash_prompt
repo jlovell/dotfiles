@@ -7,4 +7,22 @@ parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
+# Colorful Bash Prompt, inspired by "Extravagant Zsh Prompt"
+
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
+fi
+
+tput sgr0
+# if $(tput colors) is < 256, or if tput is not available, this needs to be modified
+MAGENTA=$(tput setaf 9)
+ORANGE=$(tput setaf 172)
+GREEN=$(tput setaf 190)
+PURPLE=$(tput setaf 141)
+WHITE=$(tput setaf 256)
+
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+
+
 PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"

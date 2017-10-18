@@ -4,4 +4,6 @@ alias gs='git status'
 
 alias be='bundle exec'
 
+alias g='googler --colors bjdxxy --count 4'
+
 alias recent-branches='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort'
