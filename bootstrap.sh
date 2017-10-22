@@ -13,12 +13,22 @@ function doIt() {
     --exclude "apps/" \
     -avh --no-perms . ~;
   source ~/.bash_profile;
-  rm -r ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
-  ln -s apps/Sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
+
+  # rm -r ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
+  # ln -s apps/Sublime/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User;
 
   defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
   defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
   defaults write -g com.apple.trackpad.scaling 3
+
+  open 'https://download.sublimetext.com/Sublime%20Text%202.0.2.dmg'
+  open 'https://www.spotify.com/us/download/'
+  open 'https://iterm2.com/downloads/stable/latest'
+
+  open 'https://www.spectacleapp.com/'
+  open 'https://itunes.apple.com/us/app/beautiful-earth-1-500-earth-desktop-pictures/id1041381991?mt=12'
+  open 'https://rvm.io/'
+  open 'https://www.google.com/chrome/'
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
